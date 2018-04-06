@@ -1,12 +1,10 @@
 DROP TABLE IF EXISTS UserLogin ;
 
 CREATE TABLE IF NOT EXISTS UserLogin (
-  UserID 		INT 		NOT NULL,
   LoginName 	VARCHAR(45) NOT NULL,
+  UserID 		INT 		NOT NULL,
   PasswordHash 	BINARY(64) 	NOT NULL,
-  FirstName 	VARCHAR(45) NOT NULL,
-  LastName 		VARCHAR(45) NOT NULL,
   RegisterDate 	DATETIME 	NULL,
   LastLogin 	DATETIME 	NULL,
-  PRIMARY KEY (UserID)
+  PRIMARY KEY (LoginName)
 )
