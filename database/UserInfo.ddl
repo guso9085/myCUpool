@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS UserInfo (
   Driver        TINYINT      NULL,
   ProfPicture   BLOB         NULL,
   PRIMARY KEY (UserID)
-  )
+)

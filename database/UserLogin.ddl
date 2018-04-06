@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS UserLogin (
   RegisterDate 	DATETIME 	NULL,
   LastLogin 	DATETIME 	NULL,
   PRIMARY KEY (UserID)
-  )
+)
