@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS User (
   ProfPicture   BLOB          NULL,
   UNIQUE (UserID)
   PRIMARY KEY (UserID)
-)
+);
 
 AUTO_INCREMENT = 101; 
 

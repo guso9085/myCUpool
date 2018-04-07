@@ -11,5 +11,6 @@ CREATE TABLE IF NOT EXISTS UserLogin (
   PasswordHash 	BINARY(64) 	NOT NULL,
   LastLogin 	DATETIME 	NULL,
   PRIMARY KEY (LoginName)
-)
+  FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
 
