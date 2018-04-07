@@ -42,6 +42,14 @@
   top: 0;
 }
 
+.App-locations {
+  font-size: 1.0em;
+  position: absolute;
+  right: 20%;
+  color: #f5f6fa;
+  top: 10px;
+}
+
 .App-register {
   font-size: 1.0em;
   position: absolute;
@@ -58,7 +66,7 @@
   top: 10px;
 }
 
-.App-register:hover, .App-login:hover {
+.App-register:hover, .App-login:hover, .App-locations:hover {
   color: #66DBF9;
 }
 
@@ -71,7 +79,14 @@
 .App-mission {
   display: block;
   width: 100%;
-  height: 750px;
+  height: 375px;
+  background-color: #aaa69d;
+}
+
+.App-usage {
+  display: block;
+  width: 100%;
+  height: 375px;
   background-color: #aaa69d;
 }
 
