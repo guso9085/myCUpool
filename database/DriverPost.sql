@@ -25,3 +25,17 @@ CREATE TABLE IF NOT EXISTS DriverPost (
 
 AUTO_INCREMENT = 500;
 
+INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
+VALUES(1,1,'2018-05-08','12:50:00','15:30:00',4,'Boulder',5);
+
+INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
+VALUES(2,2,'2018-05-13','11:20:00','15:30:00',1,'Boulder',0);
+
+INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
+VALUES(1,3,'2018-05-24','14:30:00','18:00:00',2,'Boulder',7);
+
+INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
+VALUES(3,4,'2018-06-09','10:30:00','19:30:00',4,'Boulder',0);
+
+INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
+VALUES(2,5,'2018-05-01','16:00:00','20:30:00',5,'Boulder',3);
