@@ -1,8 +1,13 @@
+# User Information Database
+# Sam Bennetts
+# 7 April 2018
+
+
 DROP TABLE IF EXISTS DriverPost;
 
 CREATE TABLE IF NOT EXISTS DriverPost (
   PostingID       INT           NOT NULL AUTO_INCREMENT,
-  AreaID          INT           NOT NULL,
+  DestinationID   INT           NOT NULL,
   DriverID        INT           NOT NULL,
   RideDate        DATETIME      NOT NULL,
   LeaveTime       DATETIME      NOT NULL,

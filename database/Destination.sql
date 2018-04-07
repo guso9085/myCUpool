@@ -1,3 +1,8 @@
+# User Information Database
+# Sam Bennetts
+# 7 April 2018
+
+
 DROP TABLE IF EXISTS Destination;
 
 CREATE TABLE IF NOT EXISTS Destination (

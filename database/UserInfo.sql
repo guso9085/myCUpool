@@ -1,11 +1,15 @@
-DROP TABLE IF EXISTS UserInfo;
+# User Information Database
+# Sam Bennetts
+# 7 April 2018
 
-CREATE TABLE IF NOT EXISTS UserInfo (
 
+DROP TABLE IF EXISTS User;
+
+CREATE TABLE IF NOT EXISTS User (
   UserID        INT           NOT NULL AUTO_INCREMENT,
   FirstName     VARCHAR(45)   NOT NULL,
   LastName      VARCHAR(45)   NOT NULL,
-  PhoneNumber   VARCHAR(45)   NULL,
+  PhoneNumber   VARCHAR(45)   NOT NULL,
   Email         VARCHAR(45)   NOT NULL,
   Description   VARCHAR(250)  NULL,
   Rating        DECIMAL(2,2)  NULL,
@@ -15,7 +19,8 @@ CREATE TABLE IF NOT EXISTS UserInfo (
   PRIMARY KEY (UserID)
 )
 
-AUTO_INCREMENT = 100; 
+AUTO_INCREMENT = 101; 
 
-INSERT INTO UserInfo (UserID, FirstName, LastName, PhoneNumber, Email, Description, Rating, Driver, ProfPicture)
-VALUES ()
+INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver)
+VALUES ('Sam', 'Bennetts', '303-775-4695', 'samuel.bennetts@colorado.edu', 'I like to ski', 1));
+

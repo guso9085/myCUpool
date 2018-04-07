@@ -1,8 +1,13 @@
+# User Information Database
+# Sam Bennetts
+# 7 April 2018
+
+
 DROP TABLE IF EXISTS RiderPost;
 
 CREATE TABLE IF NOT EXISTS RiderPost (
   PostingID 		INT 			NOT NULL AUTO_INCREMENT,
-  AreaID 			INT 			NULL,
+  DestinationID		INT 			NULL,
   PosterID 			INT 			NOT NULL,
   RideDate 			DATETIME 		NOT NULL,
   LeaveTime 		DATETIME 		NOT NULL,
