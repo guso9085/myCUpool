@@ -17,9 +17,9 @@ CREATE TABLE IF NOT EXISTS UserInfo (
   ProfPicture   BLOB          NULL,
   UNIQUE (UserID),
   PRIMARY KEY (UserID)
-)
+);
 
-AUTO_INCREMENT = 101; 
+ALTER TABLE UserInfo AUTO_INCREMENT = 101; 
 
 INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver)
 VALUES ('Sam', 'Bennetts', '303-775-4695', 'samuel.bennetts@colorado.edu', 'I like to ski', 1);
