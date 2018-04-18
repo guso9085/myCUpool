@@ -27,12 +27,30 @@ class App extends Component {
             <Route exact path='/Login' component={Login} />
             <Route exact path='/Register' component={Register} />
 
-
           <Footer />
         </div>
       </Router>
     );
   }
 }
+
+var express = require('express')
+var app = express()
+var mysql = require('mysql')
+
+var myConnection = require('express-myconnection')
+/**
+ * Load the stored values for database connection.
+ */
+var config = require('./config')
+var dbOptions = {
+ host: config.database.host,
+ user: config.database.user,
+ password: config.database.password,
+ port: config.database.port,
+ database: config.database.db
+}
+
+
 
 export default App;
