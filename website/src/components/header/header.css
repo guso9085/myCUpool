@@ -1,0 +1,72 @@
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40px;
+  position: absolute;
+  left: 10%;
+  top: 10px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 25px;
+  padding: 20px;
+  color: white;
+  border-bottom: solid 10px #CFB584;
+}
+
+.App-title {
+  font-size: 1.5em;
+  position: absolute;
+  left: 30px;
+  color: #f5f6fa;
+  top: 0;
+}
+
+.App-locations {
+  display: block;
+  font-size: 1.0em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  font-weight: bold;
+  text-decoration:  none;
+  position: absolute;
+  right: 20%;
+  color: #f5f6fa;
+  top: 10px;
+}
+
+.App-register {
+  display: block;
+  font-size: 1.0em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  font-weight: bold;
+  text-decoration:  none;
+  position: absolute;
+  right: 10%;
+  color: #f5f6fa;
+  top: 10px;
+}
+
+.App-login {
+  display: block;
+  font-size: 1.0em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  font-weight: bold;
+  text-decoration:  none;
+  position: absolute;
+  right: 30px;
+  color: #f5f6fa;
+  top: 10px;
+}
+
+.App-register:hover, .App-login:hover, .App-locations:hover {
+  color: #66DBF9;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

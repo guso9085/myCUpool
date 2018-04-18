@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './homePage.css';
 import {
   Map,
   TileLayer,
@@ -9,7 +8,6 @@ import {
   Popup,
   PropTypes as MapPropTypes,
 } from 'react-leaflet'
-
 
 const MyPopupMarker = ({ children, position }) => (
   <Marker position={position}>
@@ -60,25 +58,10 @@ class CustomComponent extends Component {
   }
 }
 
-
-
-class App extends Component {
+class Homepage extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">my<span style={{color:'#CFB584'}}>CU</span>pool</h1>
-          <a href="">
-		        <h1 className="App-locations">Locations</h1>
-		      </a>
-          <a href="">
-            <h1 className="App-register">Register</h1>
-          </a>
-          <a href="">
-            <h1 className="App-login">Login</h1>
-          </a>
-        </header>
         <CustomComponent />
         <div className="App-divider"></div>
         <div className="App-mission">
@@ -94,7 +77,7 @@ class App extends Component {
     		  facilitate this process of finding others looking to go to locations/events, helping save gas,
     		  reduce traffic, and help the environment.</p>
     		</div>
-    		<div className="App-usage">
+        <div className="App-usage">
     		  <h1 className="App-usage-title">How to use myCUpool</h1>
     		  <p className="App-usage-message">The design of the website is made to be simple and streamlined you
     		  can login or register at the top right of this page, and you will use your CU email to do so. Once
@@ -108,13 +91,9 @@ class App extends Component {
     		  show others whether they are a good driver/passenger or not, to prevent constantly tardy or
     		  unenjoyable people from continuing to make others lives harder.</p>
     		</div>
-        <div className="App-footer">
-          <h1 className="App-disclaimer-title">my<span style={{color:'#CFB584'}}>CU</span>pool</h1>
-          <p className= "App-disclaimer">is not responsible for any issues caused by the use of our application</p>
-        </div>
-    </div>
+      </div>
     );
   }
 }
 
-export default App;
+export default Homepage;

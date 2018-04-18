@@ -1,0 +1,49 @@
+.leaflet-container {
+  width:100%;
+  height:650px;
+}
+
+.App-divider {
+  width: 100%;
+  background-color: #222;
+  border-bottom: solid 10px #CFB584;
+}
+
+.App-mission {
+  display: block;
+  width: 100%;
+  height: 375px;
+  background-color: #aaa69d;
+}
+
+.App-usage {
+  display: block;
+  width: 100%;
+  height: 375px;
+  background-color: #aaa69d;
+}
+
+.App-disclaimer-title {
+  font-size: 1.5em;
+  position: absolute;
+  left: 60%;
+  color: #f5f6fa;
+  top: 0;
+}
+
+.App-disclaimer {
+  font-size: 0.8em;
+  position: absolute;
+  left: 69%;
+  color: #f5f6fa;
+  top: 10px;
+}
+
+
+
+#mapid { height: 180px; }
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
