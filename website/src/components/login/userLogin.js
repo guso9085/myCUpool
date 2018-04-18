@@ -7,6 +7,13 @@ import TextField from 'material-ui/TextField';
 import './login.css';
 
 class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      email:'',
+      password:''
+    }
+  }
   render() {
     return (
       <div>
@@ -25,6 +32,7 @@ class Login extends Component {
              className ="field2"
              hintText="Enter your Password"
              floatingLabelText="Password"
+             type="password"
              onChange = {(event,newValue) => this.setState({last_name:newValue})}
              />
            <br/>
