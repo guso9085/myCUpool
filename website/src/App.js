@@ -14,7 +14,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Login from './components/login/userLogin';
 import Register from './components/register/register';
-import Homepage from './components/homepage/homepage';
+import Homepage from './components/homePage/homePage';
 
 class App extends Component {
   render() {
