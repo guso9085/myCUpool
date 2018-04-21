@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript">  
+    function getFileUrl(sourceId) {  
+      var url;  
+      if (navigator.userAgent.indexOf("MSIE")>=1) {url = document.getElementById(sourceId).value;} 
+        else if(navigator.userAgent.indexOf("Firefox")>0) {url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));} 
+        else if(navigator.userAgent.indexOf("Chrome")>0) {url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));}  
+      return url;  
+    }  
+    function preImg(sourceId, targetId) {   
+      var url = getFileUrl(sourceId);   
+      var imgPre = document.getElementById(targetId);   
+      imgPre.src = url;   
+    }   
+</script>   
+<head>
+<title>About Me</title>
+<style>
+.div-inline{ display:inline}
+li{list-style: none;}
+</style>
+</head>
+<body bgcolor="#FAFAD2">
+
+<div class="user" align="center" width=980px>
+
+  <div class="p-info">
+    <div float:left>
+      <div style="float:middle;">
+        <form action="">  
+          <img id="avatar" src="" width="50px" height="50px" style="display: block;">  
+          <input type="file" name="imgOne" id="imgOne" onchange="preImg(this.id,'avatar');">  
+        </form>   
+      </div>
+      <div style="float:middle;">
+        <span id="user-name">Alex</span><br></br>
+        <input id="p-rating" type="text" placeholder="Rating Placeholder">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br></br>
+<h2></h2>
+  <div  width="980" align="left">
+    <table border="1" width="450" align="center">
+      <tr>
+        <th width="150">Recent</th>
+        <th>Placeholder</th>
+      </tr>
+      <tr>
+        <td>Ken Li</td>
+      </tr>
+      <tr>
+        <td>Jianghao Yang</td>
+      </tr>
+      <tr>
+        <td>Yutong Zhou</td>
+      </tr>
+    </table>
+  </div>
+<br></br>
+<div class="introduction" align="center">
+  <div>About Me</div>
+  <input id="p-intr" type="text" placeholder="Intorduction Placeholder" size="500" style="width:450px;height:55px;">
+</div>
+
+<br></br>
+<h3></h3>
+<div align="center">
+  <ul>
+    <li list-style: none>Email:</li>
+    <li>Phone:</li>
+    <li>Car Type:</li>
+    <li>Address: </li>
+    <li>
+      <form name="smoke">
+        Smoke?<br />
+	Yes<input type="radio" name="smoke" value="Yes">
+	No<input type="radio" name="smoke" value="No">
+    </li>
+    <li>
+      <form name="gender">
+        Male<input type="radio" name="gender" value="Male">
+	Female<input type="radio" name="gender" value="Female">
+    </li>
+  </ul>
+</div>
+</body>
+</html>
