@@ -1,3 +1,13 @@
+
+
+.Login-wrapper {
+	height:100%;
+}
+
+.Login-fields {
+
+}
+
 .appBar {
   margin: 0 auto !important;
   border: 2px solid #000 !important;
@@ -5,15 +15,19 @@
   padding-left: 600px
 }
 
-.field1 {
-  padding-left: 30%;
-}
-
-.field2 {
-  padding-left: 30%;
+.field1 label, .field2 label, .field3 label, .field4 label, .field5, label {
+	border-color: black !important;
+	color: #CFB584 !important;
 }
 
 .submit {
-  padding-left: 50%;
-  border: false;
+  box-shadow: none !important;
 }
+
+.submit button {
+ 	height:50px !important;
+ 	color: white !important;
+ 	background-color:#CFB584 !important;
+}
+
+

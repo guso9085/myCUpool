@@ -51,7 +51,7 @@ class Register extends Component {
   render() {
     var re = "^[A-Za-z0-9._%+-]+@colorado.edu$"
     return (
-      <div>
+      <div className ="Register-wrapper">
         <MuiThemeProvider>
           <div>
           <AppBar title="Register" showMenuIconButton={false} className="appBar" />

@@ -6,6 +6,7 @@ import './App.css';
 /* Import Components */
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import Listings from './components/listings/listings';
 import Login from './components/login/userLogin';
 import Register from './components/register/register';
 import Homepage from './components/homePage/homePage';
@@ -20,7 +21,8 @@ class App extends Component {
         <div>
           <Header />
 
-            <Route exact path='/' component={Homepage} />
+            <Route exact path='/Homepage' component={Homepage} />
+            <Route exact path='/Listings' component={Listings} />
             <Route exact path='/Login' component={Login} />
             <Route exact path='/Register' component={Register} />
 

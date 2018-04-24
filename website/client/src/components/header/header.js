@@ -9,8 +9,8 @@ class Header extends Component {
       <header className="App-header">
         <div>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">my<span style={{color:'#CFB584'}}>CU</span>pool</h1>
-          <Link className="App-locations" to="/Locations">Locations</Link>
+          <Link className="App-title" to="/Homepage">my<span style={{color:'#CFB584'}}>CU</span>pool</Link>
+          <Link className="App-listings" to="/Listings">Listings</Link>
           <Link className="App-register" to="/Register">Register</Link>
           <Link className="App-login" to="/Login">Login</Link>
         </div>

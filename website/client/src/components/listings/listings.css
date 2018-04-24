@@ -1,5 +1,5 @@
-.Register-wrapper {
-  height:100%;
+.Login-wrapper {
+	height:100%;
 }
 
 .appBar {
@@ -15,22 +15,6 @@
 
 .field2 {
   padding-left: 30%;
-}
-
-.field3 {
-  padding-left: 30%;
-}
-
-.field4 {
-  padding-left: 30%;
-}
-
-.field5 {
-  padding-left: 30%;
-}
-
-.UserList {
-  padding-left: 50%;
 }
 
 .submit {

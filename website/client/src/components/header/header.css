@@ -20,10 +20,11 @@
   position: absolute;
   left: 30px;
   color: #f5f6fa;
-  top: 0;
+  top: 19px;
+  text-decoration: none;
 }
 
-.App-locations {
+.App-listings {
   display: block;
   font-size: 1.0em;
   margin-top: 0.67em;

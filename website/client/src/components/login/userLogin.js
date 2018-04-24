@@ -16,11 +16,10 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-      <div>
         <MuiThemeProvider>
-          <div>
+          <div className="Login-wrapper">
           <AppBar title="Login" showMenuIconButton={false} className="appBar" />
+          <div className="Login-fields">
            <TextField
              className ="field1"
              hintText="Enter your Email"
@@ -36,11 +35,10 @@ class Login extends Component {
              onChange = {(event,newValue) => this.setState({last_name:newValue})}
              />
            <br/>
-           <RaisedButton className="submit" label="Submit" primary={true} onClick={(event) => this.handleClick(event)}/>
+           <RaisedButton className="submit" label="Log In" primary={true} onClick={(event) => this.handleClick(event)}/>
+           </div>
           </div>
          </MuiThemeProvider>
-      </div>
-      </div>
     );
   }
 }
