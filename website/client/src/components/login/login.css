@@ -15,7 +15,7 @@
   padding-left: 600px
 }
 
-.field1 label, .field2 label, .field3 label, .field4 label, .field5, label {
+.field1 label, .field2 label, .field3 label, .field4 label, .field5, label, .field6 label, .field7 label {
 	border-color: black !important;
 	color: #CFB584 !important;
 }
