@@ -21,20 +21,6 @@
   border-bottom: solid 10px #CFB584;
 }
 
-.App-mission {
-  display: block;
-  width: 100%;
-  height: 375px;
-  background-color: #aaa69d;
-}
-
-.App-usage {
-  display: block;
-  width: 100%;
-  height: 375px;
-  background-color: #aaa69d;
-}
-
 .App-disclaimer-title {
   font-size: 1.5em;
   position: absolute;

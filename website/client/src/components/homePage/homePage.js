@@ -64,32 +64,32 @@ class Homepage extends Component {
       <div className="App">
         <CustomComponent />
         <div className="App-divider"></div>
+        <div className="lander-laptop">
+          <div className="laptop"></div>
+          <div className="laptop-info-1">
+            <p className="info-center">Carpool with fellow CU students only. We require a colorado.edu email to register!</p>
+          </div>
+          <div className="laptop-info-2">
+            <p className="info-center">Looking for a ride? Make a new post as a rider with all of your personalized preferences.</p>
+          </div>
+          <div className="laptop-info-3">
+            <p className="info-center">Going to be driving to a public event? Make a new post as a driver. Make friends and save gas money.</p>
+          </div>
+          <div className="laptop-info-4">
+            <p className="info-center">Learn more about who your riding with by accessing their user profile! Make sure to fill yours out!</p>
+          </div>
+        </div>
+        <div className="App-divider"></div>
         <div className="App-mission">
-    		  <h1 className="App-mission-title">Our Mission</h1>
+    		  <h1 className="App-mission-title">Mission Statement</h1>
     		  <p className="App-mission-message">Our goal for myCUpool is to create an easy and straight forward
     		  method to facilitate CU student carpools that help save money, reduce environmental impacts, and
     		  encourage the creation of new friendships. Carpooling benefits users by having multiple people use
     		  one car instead of multiple, this saves money, reduces the volume of traffic, and helps the
     		  environment. It is often difficult for people to find others who share similar interests, and thus
-    		  hard to find other people they would be willing to carpool with. By allowing our users to easily
-    		  connect with other people whether as a passenger or a driver themselves, we facilitate this process
-    		  of finding similar individuals as well as encouraging the benefits of carpooling. MyCUPool will
-    		  facilitate this process of finding others looking to go to locations/events, helping save gas,
-    		  reduce traffic, and help the environment.</p>
-    		</div>
-        <div className="App-usage">
-    		  <h1 className="App-usage-title">How to use myCUpool</h1>
-    		  <p className="App-usage-message">The design of the website is made to be simple and streamlined you
-    		  can login or register at the top right of this page, and you will use your CU email to do so. Once
-    		  you have an account and filled out the information, you can view postings by selecting an area and
-    		  whether you want to see drivers/passengers/or both. You are also to make your own postings, as
-    		  either a driver looking for passengers, or a passenger looking for someone to be the driver. If you
-    		  are interested in contacting someone who made a posting you can use the button on their posting,
-    		  which will allow you to talk with about being a passenger or if you are willing to drive them. This
-    		  site is for CU students only, which means that we have limited users so we can have a closer sense
-    		  of community and accountability. Each user will have a rating connected to their profile, this will
-    		  show others whether they are a good driver/passenger or not, to prevent constantly tardy or
-    		  unenjoyable people from continuing to make others lives harder.</p>
+    		  hard to find other people they would be willing to carpool with. It is as easy as registering with a verified colorado.edu
+          email, logging in, and proceeding to find a post that fits your needs or make either a rider or driver request on the listings page. Students will be provided
+          Students will have access to your chosen method of contact and contact you if there's a fit! It's that easy!</p>
     		</div>
       </div>
     );
