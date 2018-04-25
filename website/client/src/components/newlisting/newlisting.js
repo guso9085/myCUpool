@@ -5,6 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import DatePicker from 'material-ui/DatePicker';
 import './newlisting.css';
 
 class newListing extends Component {
@@ -21,15 +22,21 @@ class newListing extends Component {
 	}
   }
 
+  state = {
+    value: 1,
+  };
+
+  handleChange = (event, index, value) => this.setState({value});
+
   render() {
     return (
       <div className ="Register-wrapper">
         <MuiThemeProvider>
           <div>
-          <AppBar title="Register" showMenuIconButton={false} className="appBar" />
+          <AppBar title="New listing" showMenuIconButton={false} className="appBar" />
           <TextField
              className ="field1"
-             hintText="Enter the desired post title"
+             hintText="Enter a post title"
              floatingLabelText="Title"
              value={this.state.title}
              onChange = {e => this.setState( { title: e.target.value } )}
@@ -59,28 +66,33 @@ class newListing extends Component {
             onChange = {e => this.setState( { contact: e.target.value } )}
              />
            <br/>
+           <br/>
+           <DatePicker hintText="What day?" 
+              className="field5"
+              mode="landscape"
+           />
            <SelectField
-           	  className="field5"
-	          floatingLabelText="Gas Fee"
-	          value={this.state.gasFee}
-	          onChange={e => this.setState( { gasFee: e.target.value } )}
-	        >
-	          <MenuItem value={false} primaryText="No" />
-	          <MenuItem value={true} primaryText="Yes" />
-
-	        onChange = {e => this.setState( { gasFee: e.target.value } )}
-	        </SelectField>
+              className ="field6"
+              floatingLabelText="Gas Fee?"
+              value={this.state.value}
+              onChange={this.handleChange}
+              style={style.customWidth}
+            >
+              <MenuItem value={1} primaryText="Yes" />
+              <MenuItem value={2} primaryText="No" />
+           </SelectField>
            <br/>
            <SelectField
-           	  className="field6"
-	          floatingLabelText="Driver or passenger?"
-	          value={this.state.role}
-	          onChange={e => this.setState( { role: e.target.value } )}
-	        >
-	          <MenuItem value={false} primaryText="Driver" />
-	          <MenuItem value={true} primaryText="Passenger" />
-	        </SelectField>
-           <br/>
+              className ="field7"
+              floatingLabelText="Driver or passenger"
+              value={this.state.value}
+              onChange={this.handleChange}
+              style={style.customWidth}
+            >
+              <MenuItem value={1} primaryText="Driver" />
+              <MenuItem value={2} primaryText="Passenger" />
+           </SelectField>
+           <br />
            <RaisedButton className="submit" label="Submit" primary={true} style={style} onClick={this.registerUser}/>
           </div>
          </MuiThemeProvider>
@@ -91,6 +103,9 @@ class newListing extends Component {
 
 const style = {
   margin: 15,
+  customWidth: {
+    width: 150,
+  }
 };
 
 export default newListing;

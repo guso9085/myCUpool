@@ -67,7 +67,7 @@ class Homepage extends Component {
         <div className="lander-laptop">
           <div className="laptop"></div>
           <div className="laptop-info-1">
-            <p className="info-center">Carpool with fellow CU students only. We require a colorado.edu email to register!</p>
+            <p className="info-center">Carpool with fellow CU students. We require a colorado.edu email to register!</p>
           </div>
           <div className="laptop-info-2">
             <p className="info-center">Looking for a ride? Make a new post as a rider with all of your personalized preferences.</p>
