@@ -9,23 +9,7 @@
   padding-left: 600px
 }
 
-.field1 {
-  padding-left: 30%;
-}
-
-.field2 {
-  padding-left: 30%;
-}
-
-.field3 {
-  padding-left: 30%;
-}
-
-.field4 {
-  padding-left: 30%;
-}
-
-.field5 {
+.field1, .field2, .field3, .field4, .field5, .field6, .field7 {
   padding-left: 30%;
 }
 

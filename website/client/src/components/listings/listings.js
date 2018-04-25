@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
+import { Link } from 'react-router-dom';
 import './listings.css';
 
 class Listings extends Component {
@@ -12,6 +11,9 @@ class Listings extends Component {
           <div className="Login-wrapper">
           <AppBar title="Listings" showMenuIconButton={false} className="appBar" />
           </div>
+          <Link to="/newlisting">
+            <div className="newListing">+</div>
+          </Link>
       </MuiThemeProvider>
     );
   }
