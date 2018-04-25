@@ -1,50 +1,31 @@
-# User Information Database
-# Sam Bennetts
-# 7 April 2018
 
 
-DROP TABLE IF EXISTS UserInfo;
+SET FOREIGN_KEY_CHECKS=0;
 
-CREATE TABLE IF NOT EXISTS UserInfo (
-  UserID        INT           NOT NULL AUTO_INCREMENT,
-  PasswordHash  BINARY(64)  NOT NULL,
-  FirstName     VARCHAR(45)   NOT NULL,
-  LastName      VARCHAR(45)   NOT NULL,
-  PhoneNumber   VARCHAR(45)   NOT NULL,
-  Email         VARCHAR(45)   NOT NULL,
-  Description   VARCHAR(250)  NULL,
-  Rating        DECIMAL(2,2)  NULL,
-  Driver        BOOL          NULL,
-  ProfPicture   BLOB          NULL,
-  UNIQUE (UserID),
-  PRIMARY KEY (UserID)
-);
+DROP TABLE IF EXISTS `userinfo`;
+CREATE TABLE `userinfo` (
+  `UserID` int(11) NOT NULL,
+  `FirstName` varchar(45) NOT NULL,
+  `LastName` varchar(45) NOT NULL,
+  `PhoneNumber` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) NOT NULL,
+  `Description` varchar(250) DEFAULT NULL,
+  `Rating` decimal(2,2) DEFAULT NULL,
+  `Driver` tinyint(1) DEFAULT NULL,
+  `ProfPicture` blob,
+  PRIMARY KEY (`UserID`),
+  UNIQUE KEY `UserID` (`UserID`),
+  CONSTRAINT `userlogin_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `userlogin` (`UserID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE UserInfo AUTO_INCREMENT = 110; 
 
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Sam', 'Bennetts', '303-775-4695', 'samuel.bennetts@colorado.edu', 'I like to ski', 1, password('123456'));
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Zhiren', 'Chen', '720-361-9447', 'Zhiren.Chen@colorado.edu', 'I love snowboarding', 1, password('456789'));
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Thomas', 'Wold', '919-242-4413', 'ThomasEWold@real.com', 'I love pizza', 0, password('password'));
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Delores', 'Chavez', '715-478-0201', 'DeloresDChavez@outlook.com', 'I am single', 1, password('skiing'));
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Paul', 'Haddix', '682-841-9259', 'PaulTHaddix@gmail.com', 'I am a downhill expert rider', 1, password('test123'));
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Angela', 'Davis', '303-293-2813', 'AngelaJDavis@armyspy.com', 'I’m an engineering graduate', 0, password('helloworld'));
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Vanessa', 'Smith', '715-681-7909', 'VanessaMSmith@rhyta.com', 'I don’t like to follow trends', 0, password('uniquepassword'));
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Keith', 'Smith', '614-461-9429', 'KeithJSmith@gmail.com', 'I’m a bit obsessive about cleanliness and personalization', 1, password('tryme');
-
-INSERT INTO UserInfo (FirstName, LastName, PhoneNumber, Email, Description, Driver, PasswordHash)
-VALUES ('Lynn', 'Well', '309-568-1320', 'LynnRWell@rhyta.com', 'I prefer coffee over tea', 1, password('thisPasswordSucks'));
+INSERT INTO `userinfo` VALUES ('101', 'Sam', 'Bennetts', '303-775-4695', 'samuel.bennetts@colorado.edu', 'I like to ski', null, '1', null);
+INSERT INTO `userinfo` VALUES ('102', 'Zhiren', 'Chen', '720-361-9447', 'Zhiren.Chen@colorado.edu', 'I love snowboarding', null, '1', null);
+INSERT INTO `userinfo` VALUES ('103', 'Thomas', 'Wold', '919-242-4413', 'ThomasEWold@real.com', 'I love pizza', null, '0', null);
+INSERT INTO `userinfo` VALUES ('104', 'Delores', 'Chavez', '715-478-0201', 'DeloresDChavez@outlook.com', 'I am single', null, '1', null);
+INSERT INTO `userinfo` VALUES ('105', 'Paul', 'Haddix', '682-841-9259', 'PaulTHaddix@gmail.com', 'I am a downhill expert rider', null, '1', null);
+INSERT INTO `userinfo` VALUES ('106', 'Angela', 'Davis', '303-293-2813', 'AngelaJDavis@armyspy.com', 'I’m an engineering graduate', null, '0', null);
+INSERT INTO `userinfo` VALUES ('107', 'Vanessa', 'Smith', '715-681-7909', 'VanessaMSmith@rhyta.com', 'I don’t like to follow trends', null, '0', null);
+INSERT INTO `userinfo` VALUES ('108', 'Keith', 'Smith', '614-461-9429', 'KeithJSmith@gmail.com', 'I’m a bit obsessive about cleanliness and personalization', null, '1', null);
+INSERT INTO `userinfo` VALUES ('109', 'Lynn', 'Well', '309-568-1320', 'LynnRWell@rhyta.com', 'I prefer coffee over tea', null, '1', null);
+INSERT INTO `userinfo` VALUES ('143', 'tom', 'sss', null, '123', null, null, null, null);
