@@ -17,7 +17,7 @@ router.get('/update/:data', UserInfo.update);
 
 
 router.get('*', function(req, res, next) {
-	res.sendfile(path.join(__dirname, '../../public/index.html')); // 发送静态文件
+	res.sendfile(path.join(__dirname, '../../public/index.html')); 
 });
 
 

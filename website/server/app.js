@@ -28,7 +28,7 @@ app.set('view engine', 'jade');
 // 	secret: '5A16C79BDE24BCFF'
 // }));
 
-//静态文件目录
+
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../../resource')));
 

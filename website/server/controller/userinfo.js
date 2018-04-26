@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-// var session = require('express-session');
+
 
 var db = require('../db.js');
 var Str = require('../common/string');
@@ -41,14 +41,10 @@ module.exports.login = function(req, res, next) {
 	let data = req.params;
 	let dataJson =  JSON.parse(data.data);
 	let email= dataJson.email;
-    let password = dataJson.password;
+  let password = dataJson.password;
 	let sql = 'select * from userlogin where userlogin.LoginName = "'+email+'" and userlogin.PasswordHash = "'+password+'"';
 console.log(sql);
-	// if (!req.session['article_record_' + id]) {
-	// 	req.session['article_record_' + id] = true;
-	// 	db.query(`update article set views = views + 1 where id = ${id}`, function() {})
-	// }
-	//
+
 	let users = [];
 	db.query(sql, function(err, rows) {
 		if(err) {
