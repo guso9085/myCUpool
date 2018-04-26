@@ -50,8 +50,8 @@ class Profile extends Component {
              />
            <br/>
            <TextField
-               value={lastname}
-               readOnly="true"
+             value={lastname}
+             readOnly="true"
              className ="field2"
              hintText="Enter your Last Name"
              floatingLabelText="Last Name"
@@ -77,22 +77,22 @@ class Profile extends Component {
              onChange = {(event,newValue) => this.datachange({password:newValue})}
              />
            <br/>
-              <br/>
-              <TextField
-                  value={phonenumber}
-                  className ="field2"
-                  hintText="Enter your PhoneNumber"
-                  floatingLabelText="PhoneNumber"
-                  onChange = {(event,newValue) => this.datachange({phonenumber:newValue})}
-              />
-              <br/>
-              <TextField
-                  value={description}
-                  className ="field2"
-                  hintText="Enter your Description"
-                  floatingLabelText="Description"
-                  onChange = {(event,newValue) => this.datachange({description:newValue})}
-              />
+           <TextField
+             value={phonenumber}
+             className ="field2"
+             hintText="Enter your PhoneNumber"
+             floatingLabelText="PhoneNumber"
+             onChange = {(event,newValue) => this.datachange({phonenumber:newValue})}
+            />
+            <br/>
+            <TextField
+              value={description}
+              className ="field2"
+              hintText="Enter your Description"
+              floatingLabelText="Description"
+              onChange = {(event,newValue) => this.datachange({description:newValue})}
+            />
+            <br/>
            <RaisedButton className="submit" label="Submit" primary={true} style={style} onClick={this.handleClick.bind(this,this.state)}/>
           </div>
          </MuiThemeProvider>

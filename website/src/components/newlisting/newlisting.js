@@ -92,7 +92,7 @@ class newListing extends Component {
               <MenuItem value={1} primaryText="Driver" />
               <MenuItem value={2} primaryText="Passenger" />
            </SelectField>
-           <br />
+           <br/>
            <RaisedButton className="submit" label="Submit" primary={true} style={style} onClick={this.registerUser}/>
           </div>
          </MuiThemeProvider>
