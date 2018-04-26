@@ -22,7 +22,9 @@ class Profile extends Component {
             phonenumber:''
         }
   }
-      this.getData(this.props.location.query.id);
+      var id = sessionStorage.getItem('id');
+      this.getData(id);
+      //this.getData(this.props.location.query.id);
 
   }
   render() {

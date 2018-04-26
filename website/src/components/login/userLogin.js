@@ -55,11 +55,13 @@ class Login extends Component {
                 document.getElementById('login').style.display = 'none';
                 document.getElementById('profile').style.display = 'block';
                 document.getElementById('register').disabled = true;
+                sessionStorage.setItem('id',data._info.id);
                 that.props.history.push({
                     pathname:"/Profile",
                     query:{
                         id:data._info.id
                     }
+
                 })
             }
       });
