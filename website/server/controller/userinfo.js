@@ -100,7 +100,6 @@ module.exports.update = function(req, res, next) {
 }
 
 
-
 module.exports.regist = function(req, res, next) {
     let data = req.params;
     let dataJson =  JSON.parse(data.data);
@@ -137,5 +136,19 @@ module.exports.regist = function(req, res, next) {
             })
         })
     })
+}
+
+module.exports.newListing = function(req, res, next) {
+  let data = req.params;
+  let dataJson = JSON.parse(data.data);
+  console.log(dataJson);
+  let destination = dataJson.destination;
+  let firstName = dataJson.firstName;
+  let lastName = dataJson.lastName;
+  let contact = dataJson.contact;
+  let gasFee = dataJson.gasFee;
+  let role = data.Json.role;
+
+  console.log(firstName, lastName, destination)
 
 }

@@ -21,7 +21,7 @@ class Profile extends Component {
             password:'',
             phonenumber:''
         }
-  }
+      }
       var id = sessionStorage.getItem('id');
       this.getData(id);
       //this.getData(this.props.location.query.id);
