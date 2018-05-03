@@ -9,7 +9,6 @@ import DatePicker from 'material-ui/DatePicker';
 import './newlisting.css';
 import DropDownMenu from 'material-ui/DropDownMenu';
 
-
 class newListing extends Component {
   constructor(props) {
   	super(props);
@@ -19,14 +18,10 @@ class newListing extends Component {
   	  lastName:'',
   	  contact:'',
   	  gasFee: '',
-  	  role: '',
-      date: null
+      date: '',
+      value: '',
   	}
   }
-
-  state = {
-    value: 1,
-  };
 
   handleChange = (event, index, value) => this.setState({value});
 
@@ -40,6 +35,7 @@ class newListing extends Component {
   };
 */
   render() {
+    localStorage.xyz = JSON.stringify(this.state)
     return (
       <div className ="Register-wrapper">
         <MuiThemeProvider>
@@ -50,6 +46,13 @@ class newListing extends Component {
              hintText="Enter a destination"
              floatingLabelText="Destination"
              onChange = { (event,newValue) => this.setState( {destination:newValue} )}
+             />
+           <br/>
+           <TextField
+             className ="field5"
+             hintText="Example: May 6th"
+             floatingLabelText="Day of travel"
+             onChange = { (event,newValue) => this.setState( {date:newValue} )}
              />
            <br/>
            <TextField
@@ -84,19 +87,14 @@ class newListing extends Component {
            <br/>
            <SelectField
               className ="field7"
-              floatingLabelText="Driver or Passenger?"
               value={this.state.value}
               onChange={this.handleChange}
+              floatingLabelText="Role"
             >
-              <MenuItem value={1} primaryText="Driver" />
-              <MenuItem value={2} primaryText="Passenger" />
+              <MenuItem value={"Driver"} primaryText="Driver" />
+              <MenuItem value={"Passenger"} primaryText="Passenger" />
             </SelectField>
           <br/>
-             <DatePicker hintText="Date of travel"
-              className="field5"
-              mode="landscape"
-              onChange={ (event,date) => this.setState( {date:date,}) }
-           />
            <RaisedButton className="submit" label="Submit" primary={true} style={style} onClick={this.handleClick.bind(this,this.state)}/>
           </div>
          </MuiThemeProvider>
@@ -105,13 +103,22 @@ class newListing extends Component {
   }
 
   handleClick(e) {
+    console.log(e.destination)
+    console.log(e.date)
+    console.log(e.firstName)
+    console.log(e.lastName)
+    console.log(e.contact)
     console.log(e.gasFee)
-    console.log(e.driver)
+    console.log(e.value)
     if(e.destination==""||e.firstName==""||e.lastName==""||e.email==""){
         alert('Please Fill All Blank!');
         return false;
     }
-
+    else {
+        //SOMEHOW HIDE THE DIV WITH CLASSNAME LISTINGSPEC
+        //document.getElementById('listingSPEC').style.display = 'inline-block';
+        return true;
+    }
   }
 
 }

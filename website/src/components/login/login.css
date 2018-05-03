@@ -1,11 +1,7 @@
 .Login-wrapper {
 	height:100%;
+	margin-top:10%;
 }
-
-.Login-fields {
-
-}
-
 .appBar {
   margin: 0 auto !important;
   border: 2px solid #000 !important;
@@ -23,7 +19,11 @@
 }
 
 .submit button {
- 	height:50px !important;
+	position: absolute !important;
+	z-index: 999;
+	right: 0% !important;
+	top: 87% !important;
+ 	height:40px !important;
  	color: white !important;
  	background-color:#CFB584 !important;
 }

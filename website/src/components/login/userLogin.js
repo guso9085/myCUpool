@@ -21,8 +21,8 @@ class Login extends Component {
       <div>
       <div>
         <MuiThemeProvider>
-          <div className="Login-wrapper">
           <AppBar title="Login" showMenuIconButton={false} className="appBar" />
+          <div className="Login-wrapper">
            <TextField
              className ="field1"
              hintText="Enter your Email"
