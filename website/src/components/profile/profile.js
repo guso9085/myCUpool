@@ -44,8 +44,8 @@ class Profile extends Component {
              className ="field1"
              value={firstname}
              readOnly="true"
-             hintText="Enter your First Name"
-             floatingLabelText="First Name"
+             hintText="Enter your first name"
+             floatingLabelText="First name"
              onChange = {(event,newValue) => this.datachange({first_name:newValue})}
              />
            <br/>
@@ -53,8 +53,8 @@ class Profile extends Component {
              value={lastname}
              readOnly="true"
              className ="field2"
-             hintText="Enter your Last Name"
-             floatingLabelText="Last Name"
+             hintText="Enter your last name"
+             floatingLabelText="Last name"
              onChange = {(event,newValue) => this.datachange({last_name:newValue})}
              />
            <br/>
@@ -62,7 +62,7 @@ class Profile extends Component {
              className ="field3"
              value={email}
              readOnly="true"
-             hintText="Enter your Email"
+             hintText="Enter your email"
              type="email"
              floatingLabelText="Email"
              onChange = {(event,newValue) => this.datachange({email:newValue})}
@@ -72,16 +72,16 @@ class Profile extends Component {
              className ="field4"
              value={password}
              type = "password"
-             hintText="Enter your Password"
-             floatingLabelText="Password"
+             hintText="Enter a new password"
+             floatingLabelText="Change your password"
              onChange = {(event,newValue) => this.datachange({password:newValue})}
              />
            <br/>
            <TextField
              value={phonenumber}
              className ="field2"
-             hintText="Enter your PhoneNumber"
-             floatingLabelText="PhoneNumber"
+             hintText="Enter your phone number"
+             floatingLabelText="Phone number"
              onChange = {(event,newValue) => this.datachange({phonenumber:newValue})}
             />
             <br/>
