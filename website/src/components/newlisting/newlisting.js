@@ -18,19 +18,19 @@ class newListing extends Component {
   	  firstName:'',
   	  lastName:'',
   	  contact:'',
-  	  gasFee: null,
+  	  gasFee: '',
   	  role: '',
-      driver:'',
       date: null
   	}
   }
 
-  /*state = {
+  state = {
     value: 1,
   };
 
-  handleChange = (event, index, value) => this.setState({value});*/
+  handleChange = (event, index, value) => this.setState({value});
 
+/*
   handleDriver = (event, index, value) => {
     this.setState({driver:value,})
   };
@@ -38,7 +38,7 @@ class newListing extends Component {
   handleGas = (event, index, value) => {
     this.setState({gasFee:value,})
   };
-
+*/
   render() {
     return (
       <div className ="Register-wrapper">
@@ -71,37 +71,32 @@ class newListing extends Component {
              hintText="Enter an email or phone number"
              floatingLabelText="Method of contact"
              value={this.state.contact}
-             onChange = { (event,newValue) => this.setState( {destination:newValue} )}
+             onChange = { (event,newValue) => this.setState( {contact:newValue} )}
              />
            <br/>
+           <TextField
+             className ="field6"
+             hintText="Numeric dollar amounts only"
+             floatingLabelText="Gas Fee"
+             value={this.state.gasFee}
+             onChange = { (event,newValue) => this.setState( {gasFee:newValue} )}
+             />
            <br/>
-           <DatePicker hintText="What day?"
+           <SelectField
+              className ="field7"
+              floatingLabelText="Driver or Passenger?"
+              value={this.state.value}
+              onChange={this.handleChange}
+            >
+              <MenuItem value={1} primaryText="Driver" />
+              <MenuItem value={2} primaryText="Passenger" />
+            </SelectField>
+          <br/>
+             <DatePicker hintText="Date of travel"
               className="field5"
               mode="landscape"
               onChange={ (event,date) => this.setState( {date:date,}) }
            />
-           <br/>
-           <SelectField
-              className ="field6"
-              floatingLabelText="Gas Fee?"
-              onChange={this.handleGas}
-              style={style.customWidth}
-            >
-              <MenuItem value={"Yes"} selected={"true"} primaryText="Yes" />
-              <MenuItem value={2} key={2} primaryText="No" />
-           </SelectField>
-           <br/>
-           <SelectField
-              className ="field7"
-              floatingLabelText="Driver or passenger"
-              name="driver"
-              onChange={this.handleDriver}
-              style={style.customWidth}
-            >
-              <MenuItem value={"Driver"} primaryText="Driver" />
-              <MenuItem value={"Passenger"} primaryText="Passenger" />
-           </SelectField>
-           <br/>
            <RaisedButton className="submit" label="Submit" primary={true} style={style} onClick={this.handleClick.bind(this,this.state)}/>
           </div>
          </MuiThemeProvider>
@@ -123,9 +118,6 @@ class newListing extends Component {
 
 const style = {
   margin: 15,
-  customWidth: {
-    width: 150,
-  }
 };
 
 export default newListing;

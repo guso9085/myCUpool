@@ -23,3 +23,66 @@
   	color: white;
   	font-size: 100px;
 }
+
+.listings {
+  display:table;
+  width: 100%;
+  align-items: center;
+}
+
+.listing {
+  text-align: none !important;
+  position: relative;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px black;
+  display: inline-block;
+  width: 31%;
+  height: width;
+  background-color: rgba(87, 101, 116,0.5);
+  transition: background-color .3s;
+}
+
+.listing:hover {
+  background-color: rgba(87, 101, 116,1);
+}
+
+.destination, .name, .date, .contact, .gasFee, .role {
+  color: white;
+}
+
+.destination {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.name {
+ top: 0;
+ right: 20px;
+ font-weight: 100;
+ font-size: 15px;
+}
+
+.date {
+ font-size: 15px;
+ font-weight: 100;
+}
+
+.contact {
+ font-size: 15px;
+ font-weight: 100;
+}
+
+.gasFee {
+ position: absolute;
+ top: 75%;
+ right: 10px;
+ font-weight: 100;
+}
+
+.role {
+ font-weight: bold;
+ position: absolute;
+ top: 10px;
+ right: 10px;
+}

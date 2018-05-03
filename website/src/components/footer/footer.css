@@ -1,5 +1,5 @@
 .App-footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background-color: #222;
   height: 25px;
