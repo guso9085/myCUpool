@@ -1,5 +1,6 @@
 .App-footer {
   position: fixed;
+  z-index:998;
   bottom: 0;
   background-color: #222;
   height: 25px;

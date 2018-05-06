@@ -19,7 +19,7 @@
 }
 
 .submit button {
-	position: absolute !important;
+	position: fixed !important;
 	z-index: 999;
 	right: 0% !important;
 	top: 87% !important;
