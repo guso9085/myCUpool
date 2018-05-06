@@ -42,9 +42,11 @@ class CustomComponent extends Component {
     const center = [this.state.lat, this.state.lng]
 
     const markers = [
-      { key: 'marker1', position: [51.5, -0.1], children: 'My first popup' },
-      { key: 'marker2', position: [51.51, -0.1], children: 'My second popup' },
-      { key: 'marker3', position: [51.49, -0.05], children: 'My third popup' },
+      { key: 'marker1', position: [40.006460, -105.275569], children: 'Meetup on the Hill' },
+      { key: 'marker2', position: [40.007581, -105.265942], children: 'Campus' },
+      { key: 'marker3', position: [39.999280, -105.262079], children: 'Meetup on Baseline' },
+      { key: 'marker4', position: [40.018621, -105.276560], children: 'Meetup on Pearl' },
+      { key: 'marker5', position: [40.017579, -105.255986], children: 'Meetup on 29th Street' },
     ]
     return (
       <Map center={center} zoom={this.state.zoom}>

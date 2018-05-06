@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
+import { push } from 'react-router-redux';
+
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -7,11 +11,11 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import DatePicker from 'material-ui/DatePicker';
 import './newlisting.css';
-import DropDownMenu from 'material-ui/DropDownMenu';
 
 class newListing extends Component {
   constructor(props) {
   	super(props);
+    this.handleClick = this.handleClick.bind(this);
   	this.state={
   	  destination:'',
   	  firstName:'',
@@ -20,6 +24,7 @@ class newListing extends Component {
   	  gasFee: '',
       date: '',
       value: '',
+      toggle: 'none',
   	}
   }
 
@@ -79,7 +84,7 @@ class newListing extends Component {
            <br/>
            <TextField
              className ="field6"
-             hintText="Numeric dollar amounts only"
+             hintText="Numeric dollar amounts only."
              floatingLabelText="Gas Fee"
              value={this.state.gasFee}
              onChange = { (event,newValue) => this.setState( {gasFee:newValue} )}
@@ -116,9 +121,13 @@ class newListing extends Component {
     }
     else {
         //SOMEHOW HIDE THE DIV WITH CLASSNAME LISTINGSPEC
-        //document.getElementById('listingSPEC').style.display = 'inline-block';
+        alert('Posted!');
+        this.setState( {toggle:"inline-block"} )
+        browserHistory.push('/Listings')
+        window.location.reload();
         return true;
     }
+
   }
 
 }

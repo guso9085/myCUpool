@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, browserHistory } from 'react-router-dom';
 import logo from './logo.svg';
 import './header.css'
 

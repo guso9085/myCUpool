@@ -65,7 +65,7 @@ class Register extends Component {
             alert('Please Fill All Blank!');
             return false;
         }
-        let reg = new RegExp("^[a-z0-9]+([._\\\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+        let reg = new RegExp("^[a-zA-Z0-9]+([._\\\\-]*[a-zA-Z0-9])*@colorado.edu");
         if(!reg.test(e.email)){ //if it's not a email address
             alert("Need Valid Email Address!");
             return false;
