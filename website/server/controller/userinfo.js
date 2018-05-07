@@ -138,7 +138,7 @@ module.exports.regist = function(req, res, next) {
     })
 }
 
-module.exports.newListing = function(req, res, next) {
+module.exports.addListing = function(req, res, next) {
   let data = req.params;
   let dataJson = JSON.parse(data.data);
   console.log(dataJson);
@@ -147,8 +147,22 @@ module.exports.newListing = function(req, res, next) {
   let lastName = dataJson.lastName;
   let contact = dataJson.contact;
   let gasFee = dataJson.gasFee;
-  let role = data.Json.role;
-
-  console.log(firstName, lastName, destination)
+  let role = dataJson.value;
+  let date = dataJson.date;
+  let sql = 'INSERT INTO driverpost(Destination, FirstName, LastName, Contact, GasFee, Role, RideDate) VALUES("' + destination + '","' + firstName + '","' + lastName + '", "' + contact + '", "' + gasFee + '","' + role + '","' + date + '")'
+  try {
+    db.query(sql, function(err, rows) {
+      if (err) {
+        console.log(err);
+        res.json({"status": 0, "message": err});
+      } else {
+        console.log("Success");
+        res.json({"status": 1, "message": "success"});
+      }
+    })
+  } catch(e) {
+      res.json({"status": 0, "message": err});
+      console.log(e);
+  }
 
 }

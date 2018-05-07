@@ -84,6 +84,24 @@ class Store_MessageList extends EventEmitter {
                 console.log("Fetch failed!", e);
             });
     }
+    addListing(data,callback){
+        var self = this;
+        fetch(
+            "/addListing/"+JSON.stringify(data)
+        )
+            .then(function(res) {
+                if (res.ok) {
+                    res.json().then(function(data) {
+                        self.allData = data;
+                        callback(self.allData);
+                    });
+                } else {
+                    console.log("Looks like the response wasn't perfect, got status", res.status);
+                }
+            }, function(e) {
+                console.log("Fetch failed!", e);
+            });
+    }
 }
 
 module.exports = new Store_MessageList();

@@ -7,35 +7,17 @@ DROP TABLE IF EXISTS DriverPost;
 
 CREATE TABLE IF NOT EXISTS DriverPost (
   PostingID       INT           NOT NULL AUTO_INCREMENT,
-  DestinationID   INT           NOT NULL,
-  DriverID        INT           NOT NULL,
-  RideDate        DATE          NOT NULL,
-  LeaveTime       TIME          NOT NULL,
-  ReturnTime      TIME          NOT NULL,
-  NumberSpots     INT           NOT NULL,
-  LeaveLocation   VARCHAR(45)   NULL,
-  DesiredGasMoney DECIMAL(5,2)  NULL,
-  Rider1ID        INT           NULL,
-  Rider2ID        INT           NULL,
-  Rider3ID        INT           NULL,
-  Rider4ID        INT           NULL,
-  Rider5ID        INT           NULL,
+  Destination     VARCHAR(45)   NOT NULL,
+  FirstName       VARCHAR(45)   NOT NULL,
+  LastName        VARCHAR(45)   NOT NULL,
+  Contact         VARCHAR(45)   NOT NULL,
+  GasFee          VARCHAR(45)   NOT NULL,
+  Role            VARCHAR(45)   NOT NULL,
+  RideDate        VARCHAR(45)   NOT NULL,
   PRIMARY KEY (PostingID)
 );
 
 ALTER TABLE DriverPost AUTO_INCREMENT = 500;
 
-INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
-VALUES(1,1,'2018-05-08','12:50:00','15:30:00',4,'Boulder',5);
-
-INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
-VALUES(2,2,'2018-05-13','11:20:00','15:30:00',1,'Boulder',0);
-
-INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
-VALUES(1,3,'2018-05-24','14:30:00','18:00:00',2,'Boulder',7);
-
-INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
-VALUES(3,4,'2018-06-09','10:30:00','19:30:00',4,'Boulder',0);
-
-INSERT INTO DriverPost(DestinationID, DriverID, RideDate, LeaveTime, ReturnTime, NumberSpots, LeaveLocation, DesiredGasMoney)
-VALUES(2,5,'2018-05-01','16:00:00','20:30:00',5,'Boulder',3);
+INSERT INTO driverpost(Destination, FirstName, LastName, Contact, GasFee, Role, RideDate)
+VALUES("Keystone", "Sam", "Bennetts", "303-775-4695", "50", "Driver", "2018-06-03");

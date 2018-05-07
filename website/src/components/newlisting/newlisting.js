@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
-import { push } from 'react-router-redux';
-
-
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import DatePicker from 'material-ui/DatePicker';
 import './newlisting.css';
+var store = require('../store/main');
 
 class newListing extends Component {
   constructor(props) {
@@ -23,22 +19,12 @@ class newListing extends Component {
   	  contact:'',
   	  gasFee: '',
       date: '',
-      value: '',
-      toggle: 'none',
+      value: ''
   	}
   }
 
   handleChange = (event, index, value) => this.setState({value});
 
-/*
-  handleDriver = (event, index, value) => {
-    this.setState({driver:value,})
-  };
-
-  handleGas = (event, index, value) => {
-    this.setState({gasFee:value,})
-  };
-*/
   render() {
     localStorage.xyz = JSON.stringify(this.state)
     return (
@@ -99,7 +85,7 @@ class newListing extends Component {
               <MenuItem value={"Driver"} primaryText="Driver" />
               <MenuItem value={"Passenger"} primaryText="Passenger" />
             </SelectField>
-          <br/>
+          <br/><br/><br/><br/><br/>
            <RaisedButton className="submit" label="Submit" primary={true} style={style} onClick={this.handleClick.bind(this,this.state)}/>
           </div>
          </MuiThemeProvider>
@@ -108,25 +94,21 @@ class newListing extends Component {
   }
 
   handleClick(e) {
-    console.log(e.destination)
-    console.log(e.date)
-    console.log(e.firstName)
-    console.log(e.lastName)
-    console.log(e.contact)
-    console.log(e.gasFee)
-    console.log(e.value)
     if(e.destination==""||e.firstName==""||e.lastName==""||e.email==""){
         alert('Please Fill All Blank!');
         return false;
     }
-    else {
-        //SOMEHOW HIDE THE DIV WITH CLASSNAME LISTINGSPEC
-        alert('Posted!');
-        this.setState( {toggle:"inline-block"} )
-        browserHistory.push('/Listings')
-        window.location.reload();
-        return true;
-    }
+    let that = this;
+    store.addListing(e, function(data) {
+      if(data.message == "success") {
+        alert("Successfully Added Listing")
+        that.props.history.push({
+          pathname:"/Listings"
+        })
+      } else {
+        alert("Failed to Add Listing")
+      }
+    })
 
   }
 
