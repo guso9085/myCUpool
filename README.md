@@ -2,7 +2,7 @@
 Web-app for facilitation of carpools for CU students
 
 ## To use our web app:
-## SQL is required
+### SQL is required
 
 1. Clone the repo, and navigate into myCUpool
 2. Navigate to the /website directory.
