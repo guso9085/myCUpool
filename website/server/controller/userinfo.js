@@ -164,5 +164,32 @@ module.exports.addListing = function(req, res, next) {
       res.json({"status": 0, "message": err});
       console.log(e);
   }
+}
 
+module.exports.getListings = function(req, res, next) {
+	let sql = 'SELECT * FROM driverpost'
+	db.query(sql, function(err, rows) {
+		let info = {};
+		let listings = [];
+		if(err != undefined) {
+			console.log(err);
+			res.json({'status': 0, 'message': 'error'});
+		}
+		else {
+			rows.forEach(item => {
+        listings.push({
+					'destination': item.Destination,
+					'firstname': item.FirstName,
+					'lastname': item.LastName,
+					'contact': item.Contact,
+					'date': item.RideDate,
+					'gasFee:': item.GasFee,
+					'role':item.Role
+			  })
+			});
+			info['listings'] = listings;
+      console.log(info)
+			res.json({'status': 1, 'info':  info });
+		}
+	})
 }

@@ -3,9 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import axios from 'axios';
 import './register.css';
-import {getParameter} from '../common/common.js'
 
 var store = require('../store/main');
 class Register extends Component {
@@ -61,7 +59,7 @@ class Register extends Component {
     );
   }
     handleClick(e){
-        if(e.password==""||e.last_name==""||e.first_name==""||e.email==""){
+        if(e.password===""||e.last_name===""||e.first_name===""||e.email===""){
             alert('Please Fill All Blank!');
             return false;
         }
@@ -72,10 +70,10 @@ class Register extends Component {
         }
       let that = this;
         store.regist(e,function(data){
-            if(data.info==undefined){
+            if(data.info===undefined){
                 alert('Fail to Signup');
             }else{
-                if(data.info.message=='success'){
+                if(data.info.message==='success'){
                     alert('Successfully Signup');
                     // document.getElementById('profile').style.display = 'block';
                     document.getElementById('register').style.display = 'none';

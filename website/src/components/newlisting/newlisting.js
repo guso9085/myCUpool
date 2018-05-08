@@ -94,13 +94,13 @@ class newListing extends Component {
   }
 
   handleClick(e) {
-    if(e.destination==""||e.firstName==""||e.lastName==""||e.email==""){
+    if(e.destination===""||e.firstName===""||e.lastName===""||e.email===""){
         alert('Please Fill All Blank!');
         return false;
     }
     let that = this;
     store.addListing(e, function(data) {
-      if(data.message == "success") {
+      if(data.message === "success") {
         alert("Successfully Added Listing")
         that.props.history.push({
           pathname:"/Listings"

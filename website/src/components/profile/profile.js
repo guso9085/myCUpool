@@ -3,7 +3,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import axios from 'axios';
 import './profile.css';
 import {getParameter} from '../common/common.js'
 var store = require('../store/main');
@@ -102,11 +101,11 @@ class Profile extends Component {
     datachange(data){
       for(let a in data){
           let temp = this.state.userinfo;
-          if(a=='password'){
+          if(a==='password'){
               temp.password = data[a];
-          }else if(a=='phonenumber'){
+          }else if(a==='phonenumber'){
               temp.phonenumber = data[a];
-          }else if(a=='description'){
+          }else if(a==='description'){
               temp.description = data[a];
           }
           this.setState({userinfo: temp});
@@ -122,7 +121,7 @@ class Profile extends Component {
     }
     handleClick(e) {
         store.update(e,function(data){
-            if(data.message=="success"){
+            if(data.message==="success"){
                 alert('Successfully Updated')
             }
         });

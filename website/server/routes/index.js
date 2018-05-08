@@ -12,6 +12,7 @@ router.get('/login/:data', UserInfo.login);
 router.get('/regist/:data', UserInfo.regist);
 router.get('/update/:data', UserInfo.update);
 router.get('/addListing/:data', UserInfo.addListing)
+router.get('/getListings', UserInfo.getListings)
 
 
 router.get('*', function(req, res, next) {

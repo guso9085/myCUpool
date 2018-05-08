@@ -33,7 +33,7 @@ class Store_MessageList extends EventEmitter {
                 debugger
                 if (res.ok) {
                     res.json().then(function(data) {
-                        if(data._info==undefined || data._info=={}){
+                        if(data._info===undefined || data._info==={}){
                             self.allData = null;
                         }else{
                             self.allData = data;
@@ -88,6 +88,24 @@ class Store_MessageList extends EventEmitter {
         var self = this;
         fetch(
             "/addListing/"+JSON.stringify(data)
+        )
+            .then(function(res) {
+                if (res.ok) {
+                    res.json().then(function(data) {
+                        self.allData = data;
+                        callback(self.allData);
+                    });
+                } else {
+                    console.log("Looks like the response wasn't perfect, got status", res.status);
+                }
+            }, function(e) {
+                console.log("Fetch failed!", e);
+            });
+    }
+    getListings(callback) {
+        var self = this;
+        fetch(
+            "/getListings/"
         )
             .then(function(res) {
                 if (res.ok) {
