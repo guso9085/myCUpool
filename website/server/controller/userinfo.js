@@ -183,7 +183,7 @@ module.exports.getListings = function(req, res, next) {
 					'lastname': item.LastName,
 					'contact': item.Contact,
 					'date': item.RideDate,
-					'gasFee:': item.GasFee,
+					'gasFee': item.GasFee,
 					'role':item.Role
 			  })
 			});

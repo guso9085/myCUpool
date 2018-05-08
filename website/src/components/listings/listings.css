@@ -30,20 +30,20 @@
   align-items: center;
 }
 
-.listing, .listingSPEC {
+.listing{
   text-align: none !important;
   position: relative;
-  margin: 10px;
+  margin: 1%;
   padding: 5px;
   display:inline-block;
   box-shadow: 0px 0px 10px black;
-  width: 31%;
+  width: 30%;
   height: width;
   background-color: rgba(87, 101, 116,0.5);
   transition: background-color .3s;
 }
 
-.listing:hover, .listingSPEC:hover {
+.listing:hover {
   background-color: rgba(87, 101, 116,1);
 }
 

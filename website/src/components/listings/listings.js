@@ -25,6 +25,8 @@ class Listings extends Component {
     })
   }
 
+
+
   /*renderPost(listings) {
     return listings.map(list =>
       <div className="listing">
@@ -39,42 +41,21 @@ class Listings extends Component {
   }*/
 
   render() {
+    var items = this.state.listings.map(posts => {
+      return (<div className="listing">
+                <div className="destination">Destination: {posts.destination} </div>
+                <div className="name">Name: {posts.firstname} {posts.lastname}</div>
+                <div className="contact">Contact: {posts.contact}</div>
+                <div className="date">Date: {posts.date}</div>
+                <div className="gasFee">Gas Fee: ${posts.gasFee}</div>
+                <div className="role">{posts.value}</div>
+              </div>)
+    });
     return (
       <MuiThemeProvider>
           <AppBar title="Listings" showMenuIconButton={false} className="appBar" />
             <div className="listings">
-              <div className="listing">
-                <div className="destination">Destination: Vail </div>
-                <div className="name">Name: Donald Trump</div>
-                <div className="contact">Contact: 911-911-9111</div>
-                <div className="date">Date: 5/3/18</div>
-                <div className="gasFee">Gas Fee: $5.00</div>
-                <div className="role">Passenger</div>
-              </div>
-              <div className="listing">
-                <div className="destination">Destination: Mile High Stadium</div>
-                <div className="name">Name: Donald Lump</div>
-                <div className="contact">Contact: 111-111-1101</div>
-                <div className="date">Date: 5/4/18</div>
-                <div className="gasFee">Gas Fee: $3.00</div>
-                <div className="role">Driver</div>
-              </div>
-              <div className="listing">
-                <div className="destination">Destination: Denver</div>
-                <div className="name">Name: Donald Grump</div>
-                <div className="contact">Contact: 211-311-4111</div>
-                <div className="date">Date: 5/5/18</div>
-                <div className="gasFee">Gas Fee: $10.00</div>
-                <div className="role">Passenger</div>
-              </div>
-              <div className="listingSPEC" style={{display: this.xyz.toggle }}>
-                <div className="destination">Destination: {this.xyz.destination} </div>
-                <div className="name">Name: {this.xyz.firstName}{this.xyz.lastName}</div>
-                <div className="contact">Contact: {this.xyz.contact}</div>
-                <div className="date">Date: {this.xyz.date}</div>
-                <div className="gasFee">Gas Fee: ${this.xyz.gasFee}</div>
-                <div className="role">{this.xyz.value}</div>
-              </div>
+              {items}
             </div>
           <Link to="/newlisting">
             <div className="newListing">+</div>
