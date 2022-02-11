@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ajv": "^6.2.1",
+    "ajv": "^6.12.3",
     "axios": "^0.18.0",
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-runtime": "^6.1.18",
